@@ -31,34 +31,38 @@
         android:id="@+id/resumo_pacote_quantidade_dias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="2 dias"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/resumo_pacote_cidade_title"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_cidade_title"
-        android:textSize="16sp"
-    />
+        tools:text="2 dias" />
 
     <TextView
         android:id="@+id/resumo_pacote_data_hora"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        tools:text="08/12 - 10/12 de 2017"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/resumo_pacote_preco"
         app:layout_constraintStart_toStartOf="@+id/resumo_pacote_cidade_title"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_quantidade_dias"
-        android:textSize="14sp"/>
+        tools:text="08/12 - 10/12 de 2017" />
 
     <TextView
         android:id="@+id/resumo_pacote_preco"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        tools:text="R$ 250,00"
+        android:textAlignment="textEnd"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/resumo_pacote_data_hora"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/resumo_pacote_data_hora"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_header_cidade"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="R$ 250,00" />
 
     <TextView
         android:id="@+id/resumo_pacote_preco_final"
@@ -66,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="Preço final:"
-        app:layout_constraintBottom_toTopOf="@+id/resumo_pacote_preco"
+        app:layout_constraintBottom_toBottomOf="@+id/resumo_pacote_quantidade_dias"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_header_cidade"
         app:layout_constraintVertical_bias="1.0" />
