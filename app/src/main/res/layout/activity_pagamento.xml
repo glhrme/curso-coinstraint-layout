@@ -44,6 +44,7 @@
         tools:text="R$ 200,99" />
 
     <EditText
+        android:textColor="@color/black"
         android:id="@+id/ac_pagamento_textfiel_numero_cartao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -59,6 +60,7 @@
         android:importantForAutofill="no" />
 
     <EditText
+        android:textColor="@color/black"
         android:id="@+id/ac_pagamento_mes_vencimento_cartao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,6 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ac_pagamento_textfiel_numero_cartao" />
 
     <EditText
+        android:textColor="@color/black"
         android:id="@+id/ac_pagamento_ano_vencimento_cartao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -87,6 +90,7 @@
         app:layout_constraintTop_toBottomOf="@+id/ac_pagamento_textfiel_numero_cartao" />
 
     <EditText
+        android:textColor="@color/black"
         android:id="@+id/ac_pagamento_cvc_cartao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -98,11 +102,12 @@
         android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="3"
-        android:textAlignment="viewEnd"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ac_pagamento_textfiel_numero_cartao" />
 
     <EditText
+        android:textColor="@color/black"
         android:id="@+id/ac_pagamento_nome_impresso_cartao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -113,6 +118,7 @@
         android:hint="@string/nome_impresso_no_cart_o"
         android:importantForAutofill="no"
         android:inputType="textPersonName"
+        android:digits="abcdefghijklmnopqrstuvwxyzçABCDEFGHIJKLMNOPQRSTUVWXYZÇ "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ac_pagamento_mes_vencimento_cartao" />

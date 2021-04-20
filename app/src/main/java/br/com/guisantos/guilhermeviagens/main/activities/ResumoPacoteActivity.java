@@ -2,9 +2,12 @@ package br.com.guisantos.guilhermeviagens.main.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,6 +39,23 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         this.setaDias();
         this.setaPreco();
         this.setData();
+        this.setOnClickListener();
+    }
+
+    private void setOnClickListener() {
+        Button botaoFinalizaCompra = findViewById(R.id.resumo_pacote_botao_comprar);
+        botaoFinalizaCompra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                abreTelaPagamento();
+            }
+        });
+    }
+
+    private void abreTelaPagamento() {
+        Intent intentTelaPagamento = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
+        intentTelaPagamento.putExtra("pacote", this.pacote);
+        startActivity(intentTelaPagamento);
     }
 
     private void setaImagem() { //Seta imagem no header
