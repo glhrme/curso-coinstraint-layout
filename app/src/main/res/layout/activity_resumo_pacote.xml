@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.activities.ResumoPacoteActivity">
+
+    <ImageView
+        android:id="@+id/resumo_pacote_header_cidade"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/belo_horizonte_mg" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_cidade_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Belo Horizonte"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_header_cidade" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_quantidade_dias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 dias"
+        app:layout_constraintStart_toStartOf="@+id/resumo_pacote_cidade_title"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_cidade_title"
+        android:textSize="16sp"
+    />
+
+    <TextView
+        android:id="@+id/resumo_pacote_data_hora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08/12 - 10/12 de 2017"
+        app:layout_constraintStart_toStartOf="@+id/resumo_pacote_cidade_title"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_quantidade_dias"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/resumo_pacote_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="R$ 250,00"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/resumo_pacote_data_hora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_header_cidade"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/resumo_pacote_preco_final"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Preço final:"
+        app:layout_constraintBottom_toTopOf="@+id/resumo_pacote_preco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resumo_pacote_header_cidade"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/resumo_pacote_botao_comprar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
+        android:text="Finalizar Compra"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/botao_redondo_laranja"
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

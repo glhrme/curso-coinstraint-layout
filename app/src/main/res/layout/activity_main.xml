@@ -61,13 +61,12 @@
         android:id="@+id/activity_main_lista_pacotes"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:divider="@null"
-        android:dividerHeight="0dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_main_header"
-
         tools:listitem="@layout/item_pacote_viagem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
