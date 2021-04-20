@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.activities.MainActivity">
+    tools:context=".main.activities.MainActivity"
+    android:forceDarkAllowed="true"
+>
 
     <ImageView
         android:id="@+id/activity_main_header"
@@ -17,8 +19,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@color/purple_500"
-        tools:srcCompat="@color/purple_500" />
+        app:srcCompat="@color/primary"
+        tools:srcCompat="@color/primary" />
 
     <TextView
         android:id="@+id/main_activity_especial_text"
@@ -26,15 +28,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="293dp"
+        android:layout_marginBottom="72dp"
         android:text="@string/actitivy_main_especiais"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_main_header"
+        app:layout_constraintEnd_toEndOf="@+id/activity_main_header"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/activity_main_header"
+        app:layout_constraintTop_toTopOf="@+id/activity_main_header"
         app:layout_constraintVertical_bias="0.0"
         tools:visibility="visible" />
 
@@ -57,11 +61,13 @@
         android:id="@+id/activity_main_lista_pacotes"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activity_main_header"
-        tools:listitem="@layout/item_pacote_viagem"
-    />
+
+        tools:listitem="@layout/item_pacote_viagem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
