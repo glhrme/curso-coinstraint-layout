@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 import br.com.guisantos.guilhermeviagens.R;
 import br.com.guisantos.guilhermeviagens.main.models.Pacote;
@@ -33,6 +35,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         this.setaTitleCidade();
         this.setaDias();
         this.setaPreco();
+        this.setData();
     }
 
     private void setaImagem() { //Seta imagem no header
@@ -50,13 +53,23 @@ public class ResumoPacoteActivity extends AppCompatActivity {
     private void setaDias() {
         TextView textoDias = findViewById(R.id.resumo_pacote_quantidade_dias);
         if(this.pacote.getDias() > 1)
-            textoDias.setText(this.pacote.getDias() + "dias");
+            textoDias.setText(this.pacote.getDias() + " dias");
         else
-            textoDias.setText(this.pacote.getDias() + "dias");
+            textoDias.setText(this.pacote.getDias() + " dias");
     }
 
     private void setaPreco() {
         TextView textoPreco = findViewById(R.id.resumo_pacote_preco);
         textoPreco.setText(MoedaUtil.formataParaBrasileiro(this.pacote.getPreco()));
+    }
+
+    private void setData() {
+        TextView textoData = findViewById(R.id.resumo_pacote_data_hora);
+        Calendar dataIda = Calendar.getInstance();
+        Calendar dataVolta = Calendar.getInstance();
+        dataVolta.add(Calendar.DATE,this.pacote.getDias());
+        SimpleDateFormat formatoBrasileiro = new SimpleDateFormat("dd/MM");
+
+        textoData.setText(formatoBrasileiro.format(dataIda.getTime()) + " - " + formatoBrasileiro.format(dataVolta.getTime()) + " de " + dataVolta.get(Calendar.YEAR));
     }
 }
