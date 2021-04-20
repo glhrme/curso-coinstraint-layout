@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Guilherme Viagens</string>
+    <string name="pacotes_app_title">Pacotes</string>
+    <string name="actitivy_main_especiais">Especiais</string>
+    <string name="actitivy_main_brasil">Brasil</string>
+    <string name="header_banner">header_banner</string>
 </resources>
