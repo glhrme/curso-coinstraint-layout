@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GuilhermeViagens">
-        <activity android:name=".main.activities.PagamentoActivity"></activity>
+        <activity android:name=".main.activities.ResumoCompraActivity"></activity>
+        <activity android:name=".main.activities.PagamentoActivity" />
         <activity android:name=".main.activities.ResumoPacoteActivity" />
         <activity android:name=".main.activities.MainActivity">
             <intent-filter>
