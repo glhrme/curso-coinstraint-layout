@@ -6,4 +6,11 @@
     <string name="header_banner">header_banner</string>
     <string name="contend_desc_header_image_cidade">Header Image Cidade</string>
     <string name="finalizar_compra">Finalizar Compra</string>
+    <string name="digite_informacoes_cartao">Digite as informações do cartão de crédito que você deseja usar para o pagamento.</string>
+    <string name="valor_da_compra">Valor da Compra</string>
+    <string name="n_mero_do_cart_o">Número do cartão</string>
+    <string name="mm">MM</string>
+    <string name="aa">AA</string>
+    <string name="cvc">CVC</string>
+    <string name="nome_impresso_no_cart_o">Nome impresso no cartão</string>
 </resources>
